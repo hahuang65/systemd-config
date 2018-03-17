@@ -14,4 +14,5 @@ if [ $(uname) = "Linux" ]; then
   done
 
   systemctl --user daemon-reload
+  echo "Please create env file at ${HOME}/.systemd-env"
 fi
