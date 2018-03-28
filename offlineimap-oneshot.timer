@@ -1,5 +1,5 @@
 [Unit]
-Description=Offlineimap Query Timer
+Description=Offlineimap Timer
 
 [Timer]
 OnBootSec=1m
