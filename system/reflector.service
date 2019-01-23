@@ -1,0 +1,6 @@
+[Unit]
+Description=pacman mirrorlist update
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/reflector --latest 200 --sort rate --country 'United States' --save /etc/pacman.d/mirrorlist
