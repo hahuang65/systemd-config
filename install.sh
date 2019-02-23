@@ -18,6 +18,10 @@ if [ $(uname) = "Linux" ]; then
     sudo cp -f $file "${SYS_DEST_DIR}"
   done
 
+  for file in "${PWD}/system/*.timer"; do
+    sudo cp -f $file "${SYS_DEST_DIR}"
+  done
+
   systemctl --user daemon-reload
   systemctl daemon-reload
   echo "Please create env file at ${HOME}/.systemd-env"
