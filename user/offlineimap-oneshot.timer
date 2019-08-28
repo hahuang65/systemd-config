@@ -3,6 +3,7 @@ Description=Offlineimap Timer
 
 [Timer]
 OnBootSec=1m
+# Must start service manually the very first time
 OnUnitInactiveSec=5m
 
 [Install]
