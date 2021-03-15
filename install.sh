@@ -24,5 +24,15 @@ if [ $(uname) = "Linux" ]; then
 
   systemctl --user daemon-reload
   systemctl daemon-reload
-  echo "Please create env file at ${HOME}/.systemd-env"
+
+  if test ! -f ${HOME}/.systemd-env; then
+    echo "Please create env file at ${HOME}/.systemd-env"
+  fi
+
+  sudo systemctl enable powertop.service
+  sudo systemctl start powertop.service
+  sudo systemctl enable reflector.timer
+  sudo systemctl start reflector.timer
+  systemctl --user enable mbsync.timer
+  systemctl --user start mbsync.timer
 fi
