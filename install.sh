@@ -33,6 +33,8 @@ if [ $(uname) = "Linux" ]; then
   sudo systemctl start powertop.service
   sudo systemctl enable reflector.timer
   sudo systemctl start reflector.timer
+  sudo systemctl enable bluetooth_wakeup.service
+  sudo systemctl start bluetooth_wakeup.service
   systemctl --user enable mbsync.timer
   systemctl --user start mbsync.timer
 fi
